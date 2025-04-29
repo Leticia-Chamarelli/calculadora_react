@@ -1,4 +1,4 @@
-const Button = () => {
+const Input = () => {
     return (
       <div className="App">
         
@@ -6,4 +6,4 @@ const Button = () => {
     );
   }
   
-  export default Button;
+  export default Input;
