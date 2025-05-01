@@ -70,6 +70,16 @@ const App = () => {
     }
   }
 
+  const handleBackspace = () => {
+    setCurrentNumber(prev => {
+      if (prev.length <= 1 || prev === 'Error') {
+        return '0';
+      }
+      return prev.slice(0, -1);
+    });
+  };
+  
+
   const handleEquals = ()  => {
     if (firstNumber !== '0' && operation !== '' && currentNumber !== '0'){
       switch(operation){
@@ -100,7 +110,7 @@ const App = () => {
         <Button label="x" onClick={handleMultNumbers}/>
         <Button label="/" onClick={handleDivNumbers}/>
         <Button label="C" onClick={handleOnClear}/>
-        <Button label="X"/>
+        <Button label="X" onClick={handleBackspace}/>
       </Row>
       <Row>
         <Button label="7" onClick={() => handleAddNumber('7')}/>
