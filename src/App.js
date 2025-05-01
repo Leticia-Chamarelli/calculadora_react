@@ -107,7 +107,7 @@ const App = () => {
     <Content>
       <Input value={currentNumber}/>
       <Row>
-        <Button label="x" onClick={handleMultNumbers}/>
+        <Button label="*" onClick={handleMultNumbers}/>
         <Button label="/" onClick={handleDivNumbers}/>
         <Button label="C" onClick={handleOnClear}/>
         <Button label="X" onClick={handleBackspace}/>
